@@ -6,7 +6,7 @@ let items = [];
 
 function handleSubmit(e) {
     e.preventDefault();
-    console.log('Submitted!!');
+    console.log('Submitted!!!');
     const name = e.currentTarget.item.value;
     // if its empty, then dont submit it
     if (!name) return;
@@ -18,7 +18,7 @@ function handleSubmit(e) {
     };
     // push this items into our state
     items.push(item);
-    console.log(`There are now ${items.length} in your state`);
+    console.log(`There are now ${items.length} in your state.`);
     // ckean your form
     e.target.reset();
     // fire a custom event that will tell anyone else who cares that the items have been updated!
@@ -44,7 +44,7 @@ function displayItems() {
 }
 
 function mirrorToLocalStorage() {
-    console.info('Saving items to Localstorage');
+    console.info('Saving items to Localstorage.');
     localStorage.setItem('items', JSON.stringify(items));
 };
 
